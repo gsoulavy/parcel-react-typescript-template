@@ -4,14 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./src/index.html --port 4380 --log-level 5",
-    "build": "parcel build ./src/index.html -d out/"
+    "start": "tsc --noEmit --watch & parcel ./src/index.html --port 4380 --log-level 5",
+    "build": "parcel build ./src/index.html -d public/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
   "devDependencies": {
+    "@types/node": "12.12.2",
+    "@types/react": "^16.8.24",
+    "@types/react-dom": "^16.9.7",
     "parcel-bundler": "1.12.4",
-    "sass": "^1.26.5"
+    "sass": "^1.26.5",
+    "typescript": "3.4.3"
   }
 }
